@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block header %}
+<div class="jumbotron">
+   <div class="container">
+     <h1 class="display-4">工数軽減サーチ</h1>
+   </div>
+ </div>
+{% endblock header %}
+{% block content %}
+<li><a href="{% url 'csv' %}" class="">CSVで抽出</a></li>
+
+<div class="container">
+<ul class="list-group list-group-flush">
+ <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+     <th>text</th>
+     <th>id</th>
+     <th>user</th>
+     <th>created_at</th>
+   </tr>
+ </table>
+</ul>
+</div>
+{% endblock content %}
